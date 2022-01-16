@@ -1,0 +1,25 @@
+{
+  "name": "daniellightandsound",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "watch-sass": "sass --watch src/public/scss:src/public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielfar-theatretech/github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielfar-theatretech/github.io/issues"
+  },
+  "homepage": "https://github.com/danielfar-theatretech/github.io#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.48.0"
+  }
+}
