@@ -10,7 +10,7 @@ else
 	echo "moving to gh-pages branch" &&
 	git checkout gh-pages &&
 	echo "getting dist folder" &&
-	git checkout master -- dist &&
+	git checkout $current_branch -- dist &&
 	echo "moving all files from dist into root dir" &&
 	mv dist/* dist/.* . && rmdir dist &&
 	echo "adding files to be tracked" &&
@@ -20,6 +20,6 @@ else
 	echo "pushing to origin" &&
 	git push origin  &&
 	echo "returning to branch \"$current_branch\"" &&
-	git checkout main
+	git checkout $current_branch
 fi
 
