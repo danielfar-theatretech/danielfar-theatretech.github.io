@@ -9,7 +9,7 @@ else
 	echo "name got \"$current_branch\""
 	echo "moving to gh-pages branch" &&
 	git checkout gh-pages &&
-	echi "getting dist folder" &&
+	echo "getting dist folder" &&
 	git checkout master -- dist &&
 	echo "moving all files from dist into root dir" &&
 	mv dist/* dist/.* . && rmdir dist &&
