@@ -8,7 +8,7 @@
     "dev-404": "parcel src/404.html",
     "build": "parcel build src/index.html",
     "build-404": "parcel build src/404.html",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "deploy": "deploy.sh",
     "watch-sass": "sass --watch src/public/scss:src/public/css"
   },
   "repository": {
