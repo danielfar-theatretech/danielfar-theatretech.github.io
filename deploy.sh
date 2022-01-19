@@ -14,7 +14,8 @@ else
 	git checkout $current_branch -- dist &&
 	read -p "Press [Enter] key to continue..." &&
 	echo "moving all files from dist into root dir" &&
-	mv dist/* dist/.* . && rmdir dist &&
+	mv dist/* . &&
+	rmdir dist &&
 	pause && 
 	echo "adding files to be tracked" &&
 	git add . && # add all files (that arent in gitignore) to the repo
