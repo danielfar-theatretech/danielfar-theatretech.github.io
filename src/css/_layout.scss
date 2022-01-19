@@ -75,6 +75,19 @@ hr {
             }
         }
     }
+
+    // flex parameters
+    .f#{bp.breakpoint-infix($bp-name)}-row {
+        @include bp.media-breakpoint-up($bp-name) {
+            flex-direction: row;
+        }
+    }
+
+    .f#{bp.breakpoint-infix($bp-name)}-col {
+        @include bp.media-breakpoint-up($bp-name) {
+            flex-direction: column;
+        }
+    }
 }
 
 .bg-cover {
