@@ -16,7 +16,7 @@ else
 	echo "moving all files from dist into root dir" &&
 	mv dist/* . &&
 	rmdir dist &&
-	pause && 
+	read -p "Press [Enter] key to continue..." && 
 	echo "adding files to be tracked" &&
 	git add . && # add all files (that arent in gitignore) to the repo
 	echo "committing changes as \"$1\"" &&
