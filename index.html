@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <meta name="title" content="Portfolio">
+    <meta name="name" content="Portfolio">
+    <meta name="description" content="Portfolio">
+    <meta name="theme-color" content="#AA8AFB">
+    <meta name="keywords" content="light, sound, theatre, production, portfolio">
+    <meta name="author" content="Portfolio Development Team">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="INSERT URL HERE">
+    <meta property="og:title" content="Portfolio">
+    <meta property="og:description" content="Portfolio">
+    <meta property="og:image" content="./static/images/etc_gio_large.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="INSERT URL HERE">
+    <meta property="twitter:title" content="Portfolio">
+    <meta property="twitter:description" content="Portfolio">
+    <meta property="twitter:image" content="./static/images/etc_gio_large.jpg">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./static/css/main.css">
+
+    <script src="./static/js/sidebar_manager.js" defer></script>
+
+    <script src="./static/js/views/AbstractView.js"></script>
+    <script src="./static/js/views/Home.js"></script>
+    <script src="./static/js/views/About.js"></script>
+    <script src="./static/js/views/Projects.js"></script>
+    <script src="./static/js/views/Project.js"></script>
+    <script src="./static/js/spa_manager.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper hover_collapse">
+        <div class="header">
+            <div class="menu">
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="logo">Portfolio</div>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar_inner">
+                <ul>
+                    <li>
+                        <a class="sidebar-link" href="/" data-link>
+                            <span class="icon"><i class="fa fa-eye"></i></span>
+                            <span class="text">Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-link" href="/about" data-link>
+                            <span class="icon"><i class="fa fa-question-circle"></i></span>
+                            <span class="text">About Me</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-link" href="#">
+                            <span class="icon"><i class="fa fa-book"></i></span>
+                            <span class="text">Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar-link" href="#">
+                            <span class="icon"><i class="fa fa-id-card"></i></span>
+                            <span class="text">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="padding-content"></div>
+        <div id="app">
+
+        </div>
+    </div>
+</body>
+
+</html>
