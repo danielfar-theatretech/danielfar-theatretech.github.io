@@ -1,32 +1,13 @@
 @use "./reset.scss";
+@import "./variables";
+@import "./breakpoints";
+@import "./images";
+@import "./typography";
+
+@import "./accessibility";
+@import "./tiles";
+
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;600&display=swap");
-
-$header-fg: #f5f5f5;
-$header-bg: #1d1f20;
-
-$header-height: 4em;
-
-$header-shadow-color: rgba($header-bg, 85%);
-$header-shadow-blur: 10px;
-$header-shadow-spread: 10px;
-
-$sidebar-fg: #f5f5f5;
-$sidebar-hover-fg: #f5f5f5f5;
-$sidebar-bg: #042331;
-$sidebar-hover-bg: #007dc3;
-$sidebar-separator-color: #03374e;
-
-$sidebar-collapse-width: 4em;
-$sidebar-open-width: 58%;
-
-$main-fg: #f5f5f5;
-$main-bg: #323233;
-
-$scrollbar-track-color: #1d1f20;
-$scrollbar-thumb-color: #042331;
-$scrollbar-width: 0.8em;
-
-$main-padding: 1em;
 
 * {
     font-family: "Baloo Paaji 2", cursive;
@@ -55,118 +36,256 @@ body {
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: $header-height;
-    background: $header-bg;
-    box-shadow: 0 0 $header-shadow-blur $header-shadow-spread $header-shadow-color;
-    display: flex;
-    align-items: center;
-    z-index: 99;
+    @include text-stroke(black, -1px);
 
-    .logo {
-        font-size: 25px;
-        font-weight: 700;
-        padding: 0 25px;
-        color: $header-fg;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        // border-left: 1px solid #f5f5f5;
-    }
-
-    .menu {
-        padding: 0 25px;
+    @mixin header-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $header-height;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        // border-right: 1px solid #f5f5f5;
+        justify-content: space-around;
     }
 
-    .hamburger {
-        font-size: 25px;
-        cursor: pointer;
-        color: $header-fg;
+    .flex-grow-dummy {
+        flex-grow: 3;
+    }
 
-        &:hover {
-            color: $sidebar-hover-bg;
+    .header-text-container {
+        @include header-cover();
+        flex-direction: column;
+
+        @include media("<=tablet") {
+            justify-content: flex-start;
         }
     }
-}
 
-.hover_collapse {
-    .sidebar {
-        width: $sidebar-collapse-width;
+    .header-text {
+        align-self: flex-start;
     }
 
-    .sidebar-link {
-        .text {
-            display: none;
+    .header-title {
+        padding: 2.5vw;
+        font-size: 150px;
+        color: $highlight-fg;
+
+        // Only change color when overlapping the image
+        // @include media(">1025px", "<1375px") {
+        //     color: $highlight-fg;
+        // }
+
+        @include media("<desktop") {
+            font-size: 60px;
+        }
+
+        @include media("<=phone") {
+            font-size: 30px;
+        }
+        line-height: 80%;
+    }
+
+    .header-subtitle {
+        padding: 2.5vw;
+        font-size: 30px;
+        @include media("<desktop") {
+            font-size: 25px;
+        }
+
+        @include media("<=phone") {
+            font-size: 20px;
         }
     }
-}
 
-.sidebar {
-    position: fixed;
-    top: $header-height;
-    left: 0;
-    width: $sidebar-open-width;
-    height: 100%;
-    background: $sidebar-bg;
-    z-index: 99;
+    img {
+        object-fit: cover;
+    }
 
-    .sidebar-link {
+    .header-img-container {
+        @include header-cover();
+        flex-direction: row;
+    }
+
+    .header-img {
+        max-height: $header-height;
+        width: 100%;
+    }
+
+    .header-headshot-container {
+        @include header-cover();
+        flex-direction: row;
+    }
+
+    .header-headshot {
         display: block;
-        padding: 16px 25px;
-        border-bottom: 1px solid $sidebar-separator-color;
+        margin-right: 2vw;
+        margin-bottom: 2vh;
 
-        &:hover {
-            background: $sidebar-hover-bg;
+        align-self: center;
 
-            .text,
-            .icon {
-                color: $sidebar-hover-fg;
-            }
+        height: calc($header-height * 2 / 3);
+        width: calc($header-height * 2 / 3);
+
+        @include media("<desktop") {
+            height: calc($header-height * 1 / 2);
+            width: calc($header-height * 1 / 2);
+
+            align-self: flex-end;
         }
 
-        .icon {
-            font-size: 18px;
-            color: $sidebar-fg;
-            vertical-align: middle;
+        @include media("<tablet") {
+            height: calc($header-height * 2 / 5);
+            width: calc($header-height * 2 / 5);
+
+            align-self: flex-end;
         }
 
-        .text {
-            margin-left: 19px;
-            color: $sidebar-fg;
-            font-family: sans-serif;
-            font-size: 18px;
-            letter-spacing: 2px;
+        @include imageMask(#4d4b47, 8px);
+        background-position: top center;
+    }
+}
+
+.navbar {
+    /* make it stick */
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    /* in front of all other elements */
+    z-index: 99;
+    /* set background */
+    background-color: white;
+    padding: 10px 5%;
+
+    /* define flex */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media("<=tablet") {
+        flex-direction: column;
+    }
+}
+
+.logo-container {
+    @include media("<=tablet") {
+        width: 100%;
+    }
+}
+
+.logo-image {
+    display: block;
+    height: 48px;
+}
+
+.nav-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+
+    @include media("<=tablet") {
+        display: none;
+        width: 100%;
+
+        &.active {
+            display: block;
         }
+    }
+}
+
+.menu-item {
+    display: inline-block;
+    margin-left: 1.5vw;
+    font-size: 1.6em;
+    cursor: pointer;
+
+    &:not(:last-child) {
+        &:after {
+            color: darken($color: $highlight-fg, $amount: 10%);
+            content: "|";
+            margin-left: 1.5vw;
+        }
+    }
+
+    @include media("<=tablet") {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+        text-align: end;
+
+        &:after {
+            color: darken($color: $highlight-fg, $amount: 10%);
+            content: "|";
+            margin-left: 1.5vw;
+        }
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+        text-decoration: underline;
+    }
+
+    a {
+        color: $main-bg;
+    }
+
+    &.active > a {
+        color: $highlight-fg;
+    }
+}
+
+.menu-icon {
+    display: none;
+
+    @include media("<=tablet") {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 5%;
+    }
+
+    .bar {
+        width: 20px;
+        height: 3px;
+        background-color: black;
+        margin: 4px auto;
     }
 }
 
 #main {
-    position: fixed;
-    $self-main-top: calc($header-height - $header-shadow-spread);
-    top: $self-main-top;
-    left: $sidebar-collapse-width;
-    $self-main-height: calc(100% - $header-height + $header-shadow-spread);
-    height: $self-main-height;
-    overflow: auto;
+    margin: 1vh;
+    min-height: 100 - $header-height;
+}
 
-    &:before {
-        content: "";
-        width: 100%;
-        height: $self-main-height;
-        position: fixed;
-        top: $self-main-top;
-        left: $sidebar-collapse-width;
-        background: linear-gradient(transparent calc($self-main-height - 3vh), $main-bg);
+footer {
+    margin-top: 1vh;
+    padding: 1vw;
+    width: 100%;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    color: $main-bg;
+    background-color: $main-fg;
+
+    .footer-section {
+        margin-bottom: 1vh;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
     }
+}
 
-    .padding-content {
-        height: 1em;
+a {
+    &:hover {
+        text-decoration: underline;
     }
 }
 
@@ -194,25 +313,6 @@ hr {
 
 section {
     width: 100%;
-}
-
-.main-padded {
-    padding: $main-padding;
-}
-
-.header-1 {
-    font-size: 10vw;
-    font-weight: 800;
-}
-
-.header-2 {
-    font-size: 9vw;
-    font-weight: 800;
-}
-
-.header-3 {
-    font-size: 8vw;
-    font-weight: 800;
 }
 
 .content {

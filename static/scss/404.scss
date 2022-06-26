@@ -1,0 +1,65 @@
+@import "./variables";
+@import "./breakpoints";
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+img {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    filter: brightness(30%);
+    z-index: -1;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    color: white;
+    padding: 10px;
+}
+
+.title {
+    color: lighten($highlight-fg, 25%);
+    font-size: 10vh;
+
+    @include media("<tablet") {
+        font-size: 6vh;
+    }
+}
+
+.spacer {
+    margin-bottom: 10vh;
+}
+
+.subtitle {
+    font-size: 3vh;
+}
+
+a {
+    color: lighten($highlight-fg, 25%);
+    cursor: pointer;
+
+    @include media(">phone") {
+        display: inline-block;
+        padding: 6px 12px;
+        border: 1px solid white;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover,
+        &:focus {
+            color: black;
+            background-color: white;
+        }
+    }
+}
