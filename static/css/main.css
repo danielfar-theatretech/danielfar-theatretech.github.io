@@ -145,6 +145,18 @@ p {
   margin-bottom: 1rem;
 }
 
+#navigator {
+  width: 100%;
+  height: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#navigator .btn {
+  padding: 0.5vw 0.25vw;
+  font-size: 0.8em;
+}
+
 #skip-to-content {
   background: #0d7ca5;
   color: #f5f5f5;
@@ -155,9 +167,10 @@ p {
   position: absolute;
   transform: translateY(-100%);
   transition: transform 0.3s;
-  z-index: 999;
+  z-index: -1;
 }
 #skip-to-content:focus {
+  z-index: 999;
   transform: translateY(0%);
   text-decoration: underline;
 }
@@ -171,7 +184,7 @@ p {
 }
 
 .card {
-  width: 300px;
+  width: 360px;
   margin: 10px;
   background-color: transparent;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
@@ -283,6 +296,21 @@ p {
   background-color: white;
 }
 
+.btn {
+  border: none;
+  border-radius: 0.2em;
+  background-color: #f5f5f5;
+  color: #323233;
+  padding: 1vw 0.5vw;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+.btn:hover {
+  text-decoration: underline;
+}
+
 * {
   font-family: "Baloo Paaji 2", cursive;
 }
@@ -347,7 +375,7 @@ body {
 }
 @media (max-width: 450px) {
   .header .header-title {
-    font-size: 30px;
+    font-size: 38px;
   }
 }
 .header .header-subtitle {

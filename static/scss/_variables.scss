@@ -1,3 +1,4 @@
+@import "./breakpoints";
 
 $header-fg: #f5f5f5;
 $header-bg: #1d1f20;
@@ -8,9 +9,12 @@ $main-fg: #f5f5f5;
 $main-bg: #323233;
 
 $highlight-fg: #0d7ca5;
+$highlight-fg-dark: #053749;
 
 $scrollbar-track-color: #1d1f20;
 $scrollbar-thumb-color: #042331;
 $scrollbar-width: 0.8em;
 
 $main-padding: 1em;
+
+$navbar-height: 48px;

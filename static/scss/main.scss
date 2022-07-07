@@ -4,8 +4,10 @@
 @import "./images";
 @import "./typography";
 
+@import "./navigator";
 @import "./accessibility";
 @import "./tiles";
+@import "./buttons";
 
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;600&display=swap");
 
@@ -81,7 +83,7 @@ body {
         }
 
         @include media("<=phone") {
-            font-size: 30px;
+            font-size: 38px;
         }
         line-height: 80%;
     }
@@ -175,7 +177,7 @@ body {
 
 .logo-image {
     display: block;
-    height: 48px;
+    height: $navbar-height;
 }
 
 .nav-menu {
@@ -242,6 +244,8 @@ body {
     @include media("<=tablet") {
         display: block;
         position: absolute;
+        // top: 50%;
+        // transform: translateY(-50%);
         top: 20px;
         right: 5%;
     }

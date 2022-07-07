@@ -1,0 +1,16 @@
+.btn {
+    border: none;
+    border-radius: 0.2em;
+    background-color: $main-fg;
+    color: $main-bg;
+    padding: 1vw 0.5vw;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+}
