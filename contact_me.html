@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+
+        <link rel="icon" type="image/x-icon" href="./static/images/moving_head_spot.png">
+
+        <meta name="title" content="Portfolio">
+        <meta name="name" content="Portfolio">
+        <meta name="description" content="Portfolio">
+        <meta name="theme-color" content="#0d7ca5">
+        <meta name="keywords" content="light, sound, theatre, production, portfolio">
+        <meta name="author" content="Portfolio Development Team">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="INSERT URL HERE">
+        <meta property="og:title" content="Portfolio">
+        <meta property="og:description" content="Portfolio">
+        <meta property="og:image" content="./static/images/etc_gio_large.jpg">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="INSERT URL HERE">
+        <meta property="twitter:title" content="Portfolio">
+        <meta property="twitter:description" content="Portfolio">
+        <meta property="twitter:image" content="./static/images/etc_gio_large.jpg">
+
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+                integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+              integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+              crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="./static/css/main.css">
+    </head>
+
+    <body>
+        <a id="skip-to-content" href="#main">Skip to main content</a>
+
+        <div class="header">
+            <div class="header-img-container">
+                <img src="./static/images/etc_gio-dark.png" alt="ETC GIO lighting console" class="header-img">
+            </div>
+            <div class="header-headshot-container">
+                <span class="flex-grow-dummy"></span>
+                <span class="image-mask header-over-img header-headshot" src="./static/images/me_bw.jpg"></span>
+            </div>
+            <div class="header-text-container">
+                <div class="header-text">
+                    <h2 class="header-title">Daniel <br> Farquharson</h2>
+                    <p class="header-subtitle">Aspiring Lighting Designer and Programmer</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="logo-container">
+                <img class="logo-image" src="./static/images/moving_head_spot.png" alt="logo">
+            </div>
+            <ul id="nav-list" class="nav-menu">
+                <li class="menu-item">
+                    <a href="/">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/projects">Projects</a>
+                </li>
+                <li class="menu-item active">
+                    <a href="/contact_me.html">Contact Me</a>
+                </li>
+                <li class="menu-item">
+                    <a href="/about_me.html">About Me</a>
+                </li>
+            </ul>
+            <div id="nav-toggle" class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+
+        <div id="main">
+            <h1>Get in Touch</h1>
+
+            <h1>This page is currently being worked on and contact information will be filled in shortly</h1>
+
+            <p>The best way to contact me is through E-Mail</p>
+
+            <i>Click on a contact method to copy to clipboard</i>
+
+            <div class="card-container">
+                <div class="tileBtn copy-on-click tooltip" data-copy="(+44) xxxx xxxxxx"
+                     data-tooltipId="copyPhoneNumberTT">
+                    <span class="tooltip-text" id="copyPhoneNumberTT">Copy to clipboard</span>
+                    <div class="tileBtn__icon"><i data-feather="smartphone"></i></div>
+                    <div class="tileBtn__content">(+44) xxxx xxxxxx</div>
+                    <div class="tileBtn__icon"><i data-feather="clipboard"></i></div>
+                </div>
+
+                <div class="tileBtn copy-on-click tooltip" data-copy="e@mail.com"
+                     data-tooltipId="copyEmailTT">
+                    <span class="tooltip-text" id="copyEmailTT">Copy to clipboard</span>
+                    <div class="tileBtn__icon"><i data-feather="mail"></i></div>
+                    <div class="tileBtn__content">e@mail.com</div>
+                    <div class="tileBtn__icon"><i data-feather="clipboard"></i></div>
+                </div>
+
+                <div class="tileBtn copy-on-click tooltip" data-copy="linkedin.com/USERNAME"
+                     data-tooltipId="copyLinkedinTT">
+                    <span class="tooltip-text" id="copyLinkedinTT">Copy to clipboard</span>
+                    <div class="tileBtn__icon"><i data-feather="linkedin"></i></div>
+                    <div class="tileBtn__content"><i data-feather="at-sign"></i>USERNAME</div>
+                    <div class="tileBtn__icon"><i data-feather="clipboard"></i></div>
+                </div>
+
+                <div class="tileBtn copy-on-click tooltip" data-copy="instagram.com/USERNAME"
+                     data-tooltipId="copyInstagramTT">
+                    <span class="tooltip-text" id="copyInstagramTT">Copy to clipboard</span>
+                    <div class="tileBtn__icon"><i data-feather="instagram"></i></div>
+                    <div class="tileBtn__content"><i data-feather="at-sign"></i>USERNAME</div>
+                    <div class="tileBtn__icon"><i data-feather="clipboard"></i></div>
+                </div>
+
+            </div>
+
+            <!-- <i data-feather="instagram"></i>
+            <i data-feather="linkedin"></i>
+            <i data-feather="phone"></i>
+            <i data-feather="phone-call"></i>
+            <i data-feather="smartphone"></i>
+            <i data-feather="mail"></i>
+            <i data-feather="send"></i>
+            <i data-feather="at-sign"></i> -->
+        </div>
+
+        <div id="scrollToTopBtn"><div class="icon"><i data-feather="chevrons-up"></i></div></div>
+
+        <footer>
+            <div class="footer-section">
+                <span>This site was created, from scratch, by myself. The source is available <a
+                       href="https://github.com/danielfar-theatretech/danielfar-theatretech.github.io/">here on
+                        GitHub</a></span>
+            </div>
+        </footer>
+
+        <script src="./static/js/navigation_manager.js"></script>
+        <script src="./static/js/styleHelper.js"></script>
+    </body>
+
+</html>

@@ -5,3 +5,18 @@
     /* you need to match the shadow color to your background or image border for the desired effect*/
     box-shadow: 0 0 $size $size $color inset;
 }
+
+.text-img {
+    max-width: 30vw;
+    max-height: 50vh;
+
+    @include media("<tablet") {
+        max-width: 85vw;
+        max-height: 50vh;
+
+        @include media("landscape") {
+            max-width: 85vw;
+            max-height: 90vh;
+        }
+    }
+}

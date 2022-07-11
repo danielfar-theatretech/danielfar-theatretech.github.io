@@ -34,6 +34,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
                 integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
               integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -51,7 +52,8 @@
             </div>
             <div class="header-headshot-container">
                 <span class="flex-grow-dummy"></span>
-                <span class="image-mask header-over-img header-headshot" src="../../static/images/tile-icons/arts_award_logo.png"></span>
+                <span class="image-mask header-over-img header-headshot"
+                      src="../../static/images/tile-icons/arts_award_logo.png"></span>
             </div>
             <div class="header-text-container">
                 <div class="header-text">
@@ -92,38 +94,47 @@
                 <a class="btn" href="/goldArtsAward/">Back to Gold Arts Award</a>
                 <a class="btn" href="/goldArtsAward/unit2">Unit 2</a>
             </div>
-            
-            <div class="container">
+
+            <div class="card-container">
                 <div class="card">
                     <figure class="card__thumb">
-                        <img src="" alt="Part 1 empty image"
+                        <img src="../../static/images/tile-icons/blank.png" alt="Part A empty image"
                              class="card__image">
                         <figcaption class="card__caption">
-                            <h2 class="card__title">Part 1 </h2>
-                            <p class="card__snippet">info on what is in this section</p>
-                            <a href="#" class="card__button">Read more</a>
+                            <h2 class="card__title">Part A </h2>
+                            <p class="card__snippet">Extending my arts practice - </p>
+                            <a href="/goldArtsAward/unit1/parta/" class="card__button">Read more</a>
                         </figcaption>
                     </figure>
                 </div>
 
-
-
+                <div class="card">
+                    <figure class="card__thumb">
+                        <img src="../../static/images/tile-icons/blank.png" alt="Part B empty image"
+                             class="card__image">
+                        <figcaption class="card__caption">
+                            <h2 class="card__title">Part B </h2>
+                            <p class="card__snippet">Development Opportunities within the wider arts sector</p>
+                            <a href="/goldArtsAward/unit1/partb/" class="card__button">Read more</a>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
+        </div>
+
+        <div id="scrollToTopBtn">
+            <div class="icon"><i data-feather="chevrons-up"></i></div>
         </div>
 
         <footer>
             <div class="footer-section">
-                <p>This site was created, from scratch, by myself. The source is available <a href="https://github.com/danielfar-theatretech/danielfar-theatretech.github.io/">here on GitHub</a></p>
-            </div>
-            <div class="footer-section">
-                <div>Or many</div><div>individual</div><div>sections</div>
-            </div>
-            <div class="footer-section">
-                And you can have any combination of these, in the order they come in, cause I can't be bothered haha
+                <span>This site was created, from scratch, by myself. The source is available <a
+                       href="https://github.com/danielfar-theatretech/danielfar-theatretech.github.io/">here on
+                        GitHub</a></span>
             </div>
         </footer>
 
-        <script src="../../static/js/navbar_manager.js"></script>
+        <script src="../../static/js/navigation_manager.js"></script>
         <script src="../../static/js/styleHelper.js"></script>
     </body>
 
